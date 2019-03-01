@@ -172,7 +172,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
     state.lastfmimage = null;
     emitter.emit('DOMTitleChange', state.siteName);
   });
-  app.route('/', function (state, emit) {
+  app.route('*', function (state, emit) {
     emit('replaceState', "#user");
     return userView(state, emit);
   });
